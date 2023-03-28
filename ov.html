@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAPX19fHx8ezs7Ofn5+Hh4ebLn/SuPeOLCcRwC8t+HoxLEYpHEaVVDbFjDrlpCMl2CfDw8Onu9uHr+ezgyP+1HMx4AEAmC2RDMX8/FYg6AXQ6Gmk1HoFAG7l0FtWNDct/COrq6uLs+/jMgPGJAHk+Ai8LEXhSNItFFnksAZlHAb5qFq9hInAkAHYnAJlGAK9cBOPj4/rAXOKGAFw2HKaCVJdQCumsQrhiCnouAYA7C7trEtyMGbpuA3IpAoA0AJxLA++9bcdqAItQFpxsQ9WSMeCfKv/QWO6hLqNOCXowB5ZFCst5BtmIBJdLAWcgAHEsAu2VDbRwEsWKH8KBJs+FJOGoNP//qP/ulN6UJqFNAJJDAr5sB9mKBc+DBXYpAD8NAr6CLbNpBK9tGuWfMOGQItmJEfLMVv//0vfGXMlwC6NVALZkAtKDB+OcBLdgAjAQA9CnSf7bf/rjlf/xleGnPLFjCtiQHv/vmf/wjuCWKbdkCLNiBMRxBNyPBN+KBmoqBe/KXPvcgf3tn//rosWAHL9tCLV8LLhxJf/kdvK3RMd3CrZnCb1qCdB/BuCSBZpQB9+rLd+eB+e1Jfe/VG8qAJ1EAGIyBVMNAOyjSvGxVNB+FsJxEsNxA859A+OYBbVoBOKiHeOfJOChJPGsQkgPAJ5LALl/KuGmSvm4RuqmSNqLDuKVDKZZF8p9EvCnHcF3CsB/HM6EBNaRE+SdG5BMAM59DP/kc//9ov3VXN6mNuahEPS5LnhFI6tXD8mIHK5rEt+kL/ezGvS0Gv2/L/GmKc6LJ7l4KffYiP//s698Rb96HqdXG3lIMMKOU///n/rthYFjOnRcPLiQYrmbgHBLM001KUYlA4NKCdOXTbJdFf/JOP/lWf/+av//df//hu7Xax0UEAAAAC0jCzo1KB4KAEAhAG06AppdE8V4D/GuI/fINv3bTvznZf7td/XcagMBAgMBAwkHCA8FASYRBD4hAl00CINMC7BqEtmVGu63K/bROvvhUPzoYP3ubgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxg0cO8CRAgRI0iUMHECRQoVK1i0cPAESBAhQ4gUMXIESRIlS5g0cfAGTBgxY8iUMXMGTRo1a9i0cfEIUCBBgwgVMnQIUSJFixi1cPIKVChRo0iVMnUKVSpVq1g1cvMMWDBhw4gVM3YMWTJly5i1cvQOXDhx48iVM3cOXTp169g1c/UQYECBAwkWNHgQYUKFCxm2c/YSZEiRI0mWNHkSZUqVK1k2dPcUaFChQ4kWNXoUaVKlS5m2dPgWbFixY8mWNXsWbVq1a9k2dfkYcGDBgwkXNnwYcWLFixm3dfoadGjRo0mXNn0adWrVq1k3dvsceCRw4cOJFzd+HHly5cuZt3b8Hnx48ePJlzd/Hn169evZN3f9BAQAOw==">
+
+  <title>Overflow</title>
+  <style>
+/*
+overflow:hidden;
+
+
+
+
+
+*/  
+html, body{height:100%}
+body{counter-reset:x 1973}
+#m{counter-reset:x 1973}
+table,td{padding:2px;border:1px solid blue;border-collapse: collapse;border-spacing: 0;}
+legend{font-family: sans-serif;font-weight: bold;}
+.i{text-decoration: underline;background: yellow;}
+label{cursor:pointer;b0ackground: cyan;}
+[type='radio']{margin-right: 9px;}
+#n{
+font-size: 8px;
+background-color: springgreen;
+}
+li{c0ounter-increment: x; text-align:left;}
+l0i:before{content: counters(x,"-")}
+li:before{content: counter(x)}
+
+
+
+/*
+
+
+
+*/
+  </style>  
+</head>
+<body bgcolor="white" id="body">
+
+<!-- <textarea id="cop" style="position:absolute; left:-9999px"></textarea> -->
+<table width="100%" style="height:fit-content"><tr height=100%>
+<td style="width:123px;
+vertical-align: top; text-align: center;">
+<div id="n" style="width: 122px; aspect-ratio:1.5;text-align: left;">ХЬШЩУМВЬШЖ_ЫГОМД_ЫЯУЯЬЧМАОФФТМЦЦСАЬРБНОГЦЯФЫЮЮЬРБН ЩФ_Т _ОЯЬШНУЬФФЮХЯОМЧУЪЬОШПЫНТНХШУЛУШЫЕЬЭФММВЮЫДЩНЦЦШФН ТЧЬМЬЪЛУАУЩНЬГЦМЪЦФАЦМКОЭЯХМХУОХЦСЪНЬГЬАЩЯЮБЮМ_ОЯЩЪНЕЦЧЬ НЧЩЪОГЦС
+</div>
+
+<button id="note" style="margin:22px;font-size:16px;border-radius:8px;"
+onclick="
+			cop.value='';
+
+			cop.value+=`white-space: ${n.style.whiteSpace};\n`;
+			cop.value+=`text-overflow: ${n.style.textOverflow};\n`;			
+			cop.value+=`overflow: ${n.style.overflow};\n`;			
+			cop.value+=`word-wrap: ${n.style.wordWrap};\n`;			
+			cop.value+=`word-break: ${n.style.wordBreak};\n`;			
+
+			cop.select();
+			document.execCommand('copy');
+			window.getSelection()?.removeAllRanges();
+">Copy</button>
+</td>
+<td width="222px">
+
+<fieldset><legend>white-space</legend>
+<label><input type="radio" name="pz1" onclick="fn();n.style.whiteSpace='nowrap'" checked><span>nowrap</span></label><br>
+<label><input type="radio" name="pz1" onclick="fn();n.style.whiteSpace='pre'"><span>pre</span></label><br>
+<label><input type="radio" name="pz1" onclick="fn();n.style.whiteSpace='normal'"><span class="i">normal</span></label><br>
+<label><input type="radio" name="pz1" onclick="fn();n.style.whiteSpace='pre-wrap'"><span>pre-wrap</span></label><br>
+</fieldset>
+
+<fieldset><legend>text-overflow</legend>
+<label><input type="radio" name="pz2" onclick="fn();n.style.textOverflow='clip'" checked><span class="i">clip</span></label><br>
+<label><input type="radio" name="pz2" onclick="fn();n.style.textOverflow='ellipsis'"><span>ellipsis</span></label><br>
+</fieldset>
+<fieldset><legend>overflow</legend>
+</label><input type="radio" name="pz3" onclick="fn();n.style.overflow='visible'" checked><span class="i">visible</span></label><br>
+</label><input type="radio" name="pz3" onclick="fn();n.style.overflow='hidden'"><span>hidden</span></label><br>
+</fieldset>
+
+<fieldset><legend>word-wrap</legend>
+<label><input type="radio" name="pz4" onclick="fn();n.style.wordWrap='normal'" checked><span class="i">normal</span></label><br>
+<label><input type="radio" name="pz4" onclick="fn();n.style.wordWrap='break-word'"><span>break-word</span></label><br>
+</fieldset>
+
+<fieldset><legend>word-break</legend>
+<label><input type="radio" name="pz5" onclick="fn();n.style.wordBreak='normal'" checked><span>normal</span></label><br>
+<label><input type="radio" name="pz5" onclick="fn();n.style.wordBreak='break-all'"><span class="i">break-all</span></label><br>
+</fieldset>
+
+</td>
+<td style="vertical-align: top;">
+<label><input type="radio" class="ku" id="wow"
+
+onchange="kik(this)"
+checked
+>Кирпичик</label><br>
+
+<!-- onchange="if(this.checked){
+	nz[2].checked=true; nz[2].onclick();
+	nz[4].checked=true; nz[4].onclick();
+	nz[6].checked=true; nz[6].onclick();
+	nz[8].checked=true; nz[8].onclick();	
+	nz[11].checked=true; nz[11].onclick();
+	this.checked=true;
+}" -->
+
+<!--<label><input type="radio" class="ku"
+onchange="if(this.checked){
+	nz[0].checked=true; nz[0].onclick();
+	nz[7].checked=true; nz[7].onclick();
+	nz[12].checked=true; nz[12].onclick();
+	nz[14].checked=true; nz[14].onclick();
+	this.checked=true;
+}"
+>Замостить</label><br>-->
+<textarea id="cop" style="width: calc(100% - 6px);height:222px;background:#ded;
+p0osition:absolute; l0eft:-9999px;">для копирования</textarea>
+
+
+</td>
+</tr>
+</table>
+<p style="visibility:hidden">
+<input id="i1" type="checkbox" name="b" onchange="n.style.overflow=(!i1.checked)?'visible':'hidden';">
+<label for="i1">overflow:hidden;</label><br>
+
+<input id="i2" type="checkbox" name="m" onchange="n.style.whiteSpace=(!i2.checked)?'normal':'nowrap';">
+<label for="i2">white-space:nowrap;</label><br>
+
+<input id="i3" type="checkbox" name="v" onchange="n.style.textOverflow=(!i3.checked)?'clip':'ellipsis';">
+<label for="i3">text-overflow: ellipsis;</label><br>
+</p>
+<script>
+/*
+*/
+const a=[...document.querySelectorAll('[type="radio"]')];//alert(a.length);
+const p=[...document.querySelectorAll('li')];
+const t=[...document.querySelectorAll('ul')];
+const d=[...document.querySelectorAll('.ku')];
+const fn=()=>{d.forEach(x=>{x.checked = false});}
+const nz=[...document.querySelectorAll('[name^="pz"]')];
+
+/*
+const dea=x=>{p.forEach(i=>{
+i.classList.remove('a1');
+i.classList.remove('a2');
+i.classList.remove('a3');
+i.classList.remove('a4');
+})
+p.forEach(i=>{i.classList.add(`a${x}`)});
+}
+const deb=x=>{p.forEach(i=>{
+i.classList.remove('b1');
+i.classList.remove('b2');
+})
+p.forEach(i=>{i.classList.add(`b${x}`)});
+}
+*/
+/*
+n.style.backgroundPosition='right';
+n.style.backgroundSize='auto';
+n.style.backgroundRepeat='no-repeat';
+n.style.backgroundAttachment='local';*/
+
+n.style.whiteSpace='nowrap';
+n.style.textOverflow='clip';			
+n.style.overflow='visible';			
+n.style.wordWrap='normal';			
+n.style.wordBreak='normal';
+
+const kik=x=>{
+	if(x.checked){
+		[2,4,6,8,11].forEach(i=>{nz[i].checked=true; nz[i].onclick()});
+		x.checked=true;
+	}
+}
+kik(wow);
+
+
+</script>   
+</body>
+</html>
