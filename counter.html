@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAPX19fHx8ezs7Ofn5+Hh4ebLn/SuPeOLCcRwC8t+HoxLEYpHEaVVDbFjDrlpCMl2CfDw8Onu9uHr+ezgyP+1HMx4AEAmC2RDMX8/FYg6AXQ6Gmk1HoFAG7l0FtWNDct/COrq6uLs+/jMgPGJAHk+Ai8LEXhSNItFFnksAZlHAb5qFq9hInAkAHYnAJlGAK9cBOPj4/rAXOKGAFw2HKaCVJdQCumsQrhiCnouAYA7C7trEtyMGbpuA3IpAoA0AJxLA++9bcdqAItQFpxsQ9WSMeCfKv/QWO6hLqNOCXowB5ZFCst5BtmIBJdLAWcgAHEsAu2VDbRwEsWKH8KBJs+FJOGoNP//qP/ulN6UJqFNAJJDAr5sB9mKBc+DBXYpAD8NAr6CLbNpBK9tGuWfMOGQItmJEfLMVv//0vfGXMlwC6NVALZkAtKDB+OcBLdgAjAQA9CnSf7bf/rjlf/xleGnPLFjCtiQHv/vmf/wjuCWKbdkCLNiBMRxBNyPBN+KBmoqBe/KXPvcgf3tn//rosWAHL9tCLV8LLhxJf/kdvK3RMd3CrZnCb1qCdB/BuCSBZpQB9+rLd+eB+e1Jfe/VG8qAJ1EAGIyBVMNAOyjSvGxVNB+FsJxEsNxA859A+OYBbVoBOKiHeOfJOChJPGsQkgPAJ5LALl/KuGmSvm4RuqmSNqLDuKVDKZZF8p9EvCnHcF3CsB/HM6EBNaRE+SdG5BMAM59DP/kc//9ov3VXN6mNuahEPS5LnhFI6tXD8mIHK5rEt+kL/ezGvS0Gv2/L/GmKc6LJ7l4KffYiP//s698Rb96HqdXG3lIMMKOU///n/rthYFjOnRcPLiQYrmbgHBLM001KUYlA4NKCdOXTbJdFf/JOP/lWf/+av//df//hu7Xax0UEAAAAC0jCzo1KB4KAEAhAG06AppdE8V4D/GuI/fINv3bTvznZf7td/XcagMBAgMBAwkHCA8FASYRBD4hAl00CINMC7BqEtmVGu63K/bROvvhUPzoYP3ubgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxg0cO8CRAgRI0iUMHECRQoVK1i0cPAESBAhQ4gUMXIESRIlS5g0cfAGTBgxY8iUMXMGTRo1a9i0cfEIUCBBgwgVMnQIUSJFixi1cPIKVChRo0iVMnUKVSpVq1g1cvMMWDBhw4gVM3YMWTJly5i1cvQOXDhx48iVM3cOXTp169g1c/UQYECBAwkWNHgQYUKFCxm2c/YSZEiRI0mWNHkSZUqVK1k2dPcUaFChQ4kWNXoUaVKlS5m2dPgWbFixY8mWNXsWbVq1a9k2dfkYcGDBgwkXNnwYcWLFixm3dfoadGjRo0mXNn0adWrVq1k3dvsceCRw4cOJFzd+HHly5cuZt3b8Hnx48ePJlzd/Hn169evZN3f9BAQAOw==">
+
+  <title>каунтер</title>
+  <style>
+/*
+overflow:hidden;
+
+
+
+
+
+*/  
+html, body{height:100%}
+body{counter-reset:x 1973}
+#m{counter-reset:x 1973}
+table,td{padding:2px;border:1px solid blue;border-collapse: collapse;border-spacing: 0;}
+legend{font-family: sans-serif;font-weight: bold;}
+.i{text-decoration: underline;background: yellow;}
+label{cursor:pointer;b0ackground: cyan;}
+[type='radio']{margin-right: 9px;}
+#n{
+background-color: springgreen;
+}
+li{c0ounter-increment: x; text-align:left;}
+l0i:before{content: counters(x,"-")}
+li:before{content: counter(x)}
+
+.a1:after{content:'';counter-increment: x}
+.a2:after{content:'';counter-increment: x 10}
+.a3:after{content:'';counter-increment: x x}
+.a4:after{content:'';counter-increment: x x x x x}
+
+.b1:before{content: counter(x)}
+.b2:before{content: counters(x,'-')}
+
+/*
+
+
+
+*/
+  </style>  
+</head>
+<body bgcolor="white" id="body">
+
+<!-- <textarea id="cop" style="position:absolute; left:-9999px"></textarea> -->
+<table width="100%" style="height:fit-content"><tr height=100%>
+<td style="width:123px;
+vertical-align: top; text-align: center;">
+<div id="n" style="width: 122px; aspect-ratio:1.5;">
+
+
+<ul id="m"><li class="a1 b1"><li class="a1 b1"><li class="a1 b1"></ul>
+</div>
+
+<button id="note" style="margin:22px;font-size:16px;border-radius:8px;"
+onclick="
+			cop.value='';
+			if(a[4].checked||a[5].checked){
+			cop.value+='body{counter-reset:'+body.style.counterReset+';}\n';
+			cop.value+='ul{list-style-type: '+m.style.listStyleType+';}\n';
+			}
+			if(a[6].checked||a[7].checked){
+			cop.value+='ul{counter-reset:'+m.style.counterReset+';';
+			cop.value+='list-style-type: '+m.style.listStyleType+';}\n';
+			}
+			
+			
+			cop.value+='li{text-align:left;}\n';
+			
+			if (a[12].checked)
+			{cop.value+='li:before{content: counter(x);}\n'}
+			else
+			{cop.value+=`li:before{content: counters(x,'-');}\n`}
+			
+			if(a[8].checked)cop.value+=`li:after{content: ''; counter-increment: x;}\n`;
+			if(a[9].checked)cop.value+=`li:after{content: ''; counter-increment: x 10;}\n`;
+			if(a[10].checked)cop.value+=`li:after{content: ''; counter-increment: x x;}\n`;
+			if(a[11].checked)cop.value+=`li:after{content: ''; counter-increment: x x x x x;}\n`;			
+			
+			cop.value+='<ul><li><li><li></ul>';
+			cop.select();
+			document.execCommand('copy');
+			window.getSelection()?.removeAllRanges();
+">Copy</button>
+</td>
+<td width="222px">
+<fieldset><legend>list-style-type</legend>
+<label><input type="radio" name="pz7" onclick="fn();m.style.listStyleType='none'"><span>none</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();m.style.listStyleType='disc'" checked ><span>disc</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();m.style.listStyleType='circle'"><span>circle</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();m.style.listStyleType='square'"><span>square</span></label><br>
+
+</fieldset>
+<fieldset><legend>counter-reset</legend>
+<fieldset><legend>body</legend>
+<label><input type="radio" name="pz8" onclick="
+fn();
+body.style.counterReset='x';
+" ><span>x</span></label><br>
+
+<label><input type="radio" name="pz8" onclick="
+fn();
+body.style.counterReset='x 1973';
+" ><span>x 1973</span></label><br>
+
+
+
+</fieldset>
+<fieldset><legend>ul</legend>
+
+
+<label><input type="radio" name="pz8" onclick="
+fn();
+t.forEach(i=>{i.style.counterReset='x'});
+"><span class="i">x</span></label><br>
+<label><input type="radio" name="pz8" onclick="
+fn();
+t.forEach(i=>{i.style.counterReset='x 1973'});
+" checked><span class="i">x 1973</span></label><br>
+
+</fieldset>
+</fieldset>
+
+<fieldset><legend>counter-increment</legend>
+<label><input type="radio" name="pz9" onclick="fn();
+dea(1);//p.forEach(i=>{i.style.counterIncrement='x'});
+" checked><span>x</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();
+dea(2);//p.forEach(i=>{i.style.counterIncrement='x 10'});
+"><span>x 10</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();
+dea(3);//p.forEach(i=>{i.style.counterIncrement='x x'});
+"><span>x x</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();
+dea(4);//p.forEach(i=>{i.style.counterIncrement='x x x x x'});
+"><span>x x x x x</span></label><br>
+</fieldset>
+
+<fieldset><legend>counter()</legend>
+<label><input type="radio" name="pz10" onclick="fn();
+deb(1);//
+" checked><span>counter(x)</span></label><br>
+<label><input type="radio" name="pz10" onclick="fn();
+deb(2);//
+"><span>counters(x,'-')</span></label><br>
+
+</fieldset>
+
+</td>
+<td style="vertical-align: top;">
+<label><input type="radio" class="ku"
+onchange="if(this.checked){
+	nz[0].checked=true; nz[0].onclick();
+	nz[4].checked=true; nz[4].onclick();
+	nz[8].checked=true; nz[8].onclick();
+	nz[12].checked=true; nz[12].onclick();
+	this.checked=true;
+}"
+>Классик</label><br>
+
+<!--<label><input type="radio" class="ku"
+onchange="if(this.checked){
+	nz[0].checked=true; nz[0].onclick();
+	nz[7].checked=true; nz[7].onclick();
+	nz[12].checked=true; nz[12].onclick();
+	nz[14].checked=true; nz[14].onclick();
+	this.checked=true;
+}"
+>Замостить</label><br>-->
+<textarea id="cop" style="width: calc(100% - 6px);height:222px;background:#ded;
+p0osition:absolute; l0eft:-9999px;">для копирования</textarea>
+
+
+</td>
+</tr>
+</table>
+<p style="visibility:hidden">
+<input id="i1" type="checkbox" name="b" onchange="n.style.overflow=(!i1.checked)?'visible':'hidden';">
+<label for="i1">overflow:hidden;</label><br>
+
+<input id="i2" type="checkbox" name="m" onchange="n.style.whiteSpace=(!i2.checked)?'normal':'nowrap';">
+<label for="i2">white-space:nowrap;</label><br>
+
+<input id="i3" type="checkbox" name="v" onchange="n.style.textOverflow=(!i3.checked)?'clip':'ellipsis';">
+<label for="i3">text-overflow: ellipsis;</label><br>
+</p>
+<script>
+/*
+*/
+const a=[...document.querySelectorAll('[type="radio"]')];//alert(a.length);
+const p=[...document.querySelectorAll('li')];
+const t=[...document.querySelectorAll('ul')];
+const d=[...document.querySelectorAll('.ku')];
+const fn=()=>{d.forEach(x=>{x.checked = false});}
+const nz=[...document.querySelectorAll('[name^="pz"]')];
+
+const dea=x=>{p.forEach(i=>{
+i.classList.remove('a1');
+i.classList.remove('a2');
+i.classList.remove('a3');
+i.classList.remove('a4');
+})
+p.forEach(i=>{i.classList.add(`a${x}`)});
+}
+const deb=x=>{p.forEach(i=>{
+i.classList.remove('b1');
+i.classList.remove('b2');
+})
+p.forEach(i=>{i.classList.add(`b${x}`)});
+}
+
+n.style.backgroundPosition='right';
+n.style.backgroundSize='auto';
+n.style.backgroundRepeat='no-repeat';
+n.style.backgroundAttachment='local';
+
+body.style.counterReset='x 1973';
+m.style.counterReset='x 1973';
+m.style.listStyleType='disc';
+</script>   
+</body>
+</html>

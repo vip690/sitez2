@@ -16,7 +16,7 @@ label:has([type='checkbox']:checked)
 label svg polyline{stroke:none}	
 label:has([type='checkbox']:checked) svg polyline{stroke:blue}
 
-.dd{width:100px; aspect-ratio:1;}
+.dd{margin: auto;display: block;width:100px; aspect-ratio:1;}
 h5{text-align: center;}
 svg{border: 2px solid pink}
 
@@ -27,6 +27,8 @@ label{counter-increment: y}
 #da:before{content: "svg=" counter(x)". input=" counter(y) "-\n";}
 
 .gorr{margin: 20px auto;display: flex; flex-direction: column;
+justify-content: space-between; 
+align-items: center;
 width: fit-content; background: #ded;
 border: 3px double springgreen;
 box-shadow: 5px 5px 50px 5px blue;}
@@ -39,7 +41,8 @@ word-wrap: normal;
 word-break: break-all;
 }
 
-h5{p0osition: absolute; bottom:0;}
+h5{p0osition: absolute; bottom:0;
+a0lign-self: flex-end;}
 </style>
 </head>
 <body>
@@ -117,8 +120,10 @@ const a=[['data:image/gif;base64,R0lGODlhEAAQAOYAAP7+/r2//qab/qeX/sS//v39/f///sH
 f.innerHTML=a.map((x,i)=>
 `
 <div class="gorr">
+<article>
 <img class="dd" src="${(!x[0])?'data:image/ico;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRRM//UUPg/0w/4f9FN9z/KSGb/xINdf8OBnz/DQN7/woCa/8IAVP/IRmF/z0ysv9FNNT/RzDw/1g88/82JIf/TkHN/01B1f9LQ83/LiiW/x0Wjv8fGKz/IxHU/yYM0f8gBr7/GACu/xcLk/8/Nrj/SDXc/0Mq7v9kRP//X0TC/0c81P9JPcr/Njec/xcWh/8lJ5P/Hh6O/xQRmv8YCav/IRDB/x8Gvv8TAK//LiKp/0M01f9HMeL/c1Hy/3dY5/9DO9b/Ozed/ycpuf8IBnz/IimJ/xcIhP8WAaf/GwWo/yMMvP8jCMn/HQLD/x4Isv9DMtv/Tjbs/2FJ9f9eROL/KCaM/xsjiv8fIdX/DQyA/yAlhP8PAIX/CAB7/w8Aiv8rGOH/GwfW/xsDzv8jA8//JhPF/xQAsv8qF8f/RzPZ/x8hkf8tMdX/HRXB/xgWkf8uM6H/JR+r/yAdrf8YC87/Cgjf/xQD3f8cA+T/IQDi/zYV4v8HAIn/IQu9/1dE0/8rL8H/KSvX/wkEiP8gIJX/Ki+1/xgflP8THEb/DwJ7/yEPwf8YA9L/HQXk/x4D5v8kA+j/BACH/y0bsf9DNLb/LjDL/xwbzf8GBG//LS6m/ykpyv8jG87/MDWM/yQO4/8wCP//EgPD/w8Dpv8PBHH/DgB4/wAAhf9RSLP/RDex/ycos/8dFdz/BwJv/ywrqf8lI7j/IhvM/yQipf8rKrf/IwL8/w4Bnv8VDW//CgoV/xEFa/8FAJX/al/G/2BM0f8cH4n/JynZ/wAAUP8NEmz/FRdw/xYKlP8EAE//ISZz/yIXzv8VAqn/DANu/wUETv8RA5z/AACM/21hzP9sWdb/KTKQ/ycsr/8KCFr/AgA2/wQCIf8VEkT/AwQl/xshc/8jIKj/GxCs/w4Gkv8UArT/JQP//wAArv9gU9X/emTh/yo0jP8xPaD/KC+e/woIWf8LClH/DxBV/wgHRv8PC3v/Hha6/yANyf8ZAt3/IADt/zcG//8AAKT/U0Xm/2RQ7v89P4f/GSd3/yc0jf8pN53/FBl8/wgFbf8hHaD/JCHJ/xwZwf8ZCcX/FQDT/yEB8P9BEf//CQWS/1dH+f9WR+H/alef/zM8hf8WInD/HCl9/x4qjf8WHJr/FxGT/yYcqP8kE7b/HwHO/xoA5/8gAP//EgCy/xkUq/9YSe//XVOS/zkrpv9FPa7/Njaj/x8mgP8VH3H/FhyC/xsXpf8eC7r/HADe/xcA+P8QAOz/CgCp/woBlv80I+z/W1Kp/11Wgf8pGbL/MhzC/zwsuf83KLP/Kiae/xgZlP8YFpz/GRWf/wkFev8QB4L/Fw52/yIddP80LZj/UUqd/1lSi/9aVIL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==':x[0]}">
 <div class="note">${x[1]}</div>
+</article>
 <h5><a href="${x[2]}">${x[3]}</a></h5>
 </div>
 `

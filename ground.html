@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAPX19fHx8ezs7Ofn5+Hh4ebLn/SuPeOLCcRwC8t+HoxLEYpHEaVVDbFjDrlpCMl2CfDw8Onu9uHr+ezgyP+1HMx4AEAmC2RDMX8/FYg6AXQ6Gmk1HoFAG7l0FtWNDct/COrq6uLs+/jMgPGJAHk+Ai8LEXhSNItFFnksAZlHAb5qFq9hInAkAHYnAJlGAK9cBOPj4/rAXOKGAFw2HKaCVJdQCumsQrhiCnouAYA7C7trEtyMGbpuA3IpAoA0AJxLA++9bcdqAItQFpxsQ9WSMeCfKv/QWO6hLqNOCXowB5ZFCst5BtmIBJdLAWcgAHEsAu2VDbRwEsWKH8KBJs+FJOGoNP//qP/ulN6UJqFNAJJDAr5sB9mKBc+DBXYpAD8NAr6CLbNpBK9tGuWfMOGQItmJEfLMVv//0vfGXMlwC6NVALZkAtKDB+OcBLdgAjAQA9CnSf7bf/rjlf/xleGnPLFjCtiQHv/vmf/wjuCWKbdkCLNiBMRxBNyPBN+KBmoqBe/KXPvcgf3tn//rosWAHL9tCLV8LLhxJf/kdvK3RMd3CrZnCb1qCdB/BuCSBZpQB9+rLd+eB+e1Jfe/VG8qAJ1EAGIyBVMNAOyjSvGxVNB+FsJxEsNxA859A+OYBbVoBOKiHeOfJOChJPGsQkgPAJ5LALl/KuGmSvm4RuqmSNqLDuKVDKZZF8p9EvCnHcF3CsB/HM6EBNaRE+SdG5BMAM59DP/kc//9ov3VXN6mNuahEPS5LnhFI6tXD8mIHK5rEt+kL/ezGvS0Gv2/L/GmKc6LJ7l4KffYiP//s698Rb96HqdXG3lIMMKOU///n/rthYFjOnRcPLiQYrmbgHBLM001KUYlA4NKCdOXTbJdFf/JOP/lWf/+av//df//hu7Xax0UEAAAAC0jCzo1KB4KAEAhAG06AppdE8V4D/GuI/fINv3bTvznZf7td/XcagMBAgMBAwkHCA8FASYRBD4hAl00CINMC7BqEtmVGu63K/bROvvhUPzoYP3ubgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxg0cO8CRAgRI0iUMHECRQoVK1i0cPAESBAhQ4gUMXIESRIlS5g0cfAGTBgxY8iUMXMGTRo1a9i0cfEIUCBBgwgVMnQIUSJFixi1cPIKVChRo0iVMnUKVSpVq1g1cvMMWDBhw4gVM3YMWTJly5i1cvQOXDhx48iVM3cOXTp169g1c/UQYECBAwkWNHgQYUKFCxm2c/YSZEiRI0mWNHkSZUqVK1k2dPcUaFChQ4kWNXoUaVKlS5m2dPgWbFixY8mWNXsWbVq1a9k2dfkYcGDBgwkXNnwYcWLFixm3dfoadGjRo0mXNn0adWrVq1k3dvsceCRw4cOJFzd+HHly5cuZt3b8Hnx48ePJlzd/Hn169evZN3f9BAQAOw==">
+
+  <title>бэкграунд</title>
+  <style>
+/*
+overflow:hidden;
+
+
+
+
+
+*/  
+html, body{height:100%}
+table,td{padding:2px;border:1px solid blue;border-collapse: collapse;border-spacing: 0;}
+legend{font-family: sans-serif;font-weight: bold;}
+.i{text-decoration: underline;background: yellow;}
+label{cursor:pointer;b0ackground: cyan;}
+[type='radio']{margin-right: 9px;}
+#n{
+background-color: springgreen;
+background-image: url(data:image/gif;base64,R0lGODlhEAAQAPcAAC0fFCMdFCUdFCMdEygeFT8iEk0sFlAqFYEpIYQqI5E5I8+aPuO2Q+jPcOLcrrKme3saE1wcFS0kGRcfFGEgGl4iFFgkFXInGZAjIY4lIYQYHIIoHruYVvHruFZKOTosGYsgGp4cGK4aFpcYFZgfHpIiJIwmIIsxIp0tKLMxLKorJqIdHaxpRp6SYQUAABgLAo0gHZsgGZ8fG5QRDnIcAFtBC0UwAxEKAAAAADYDBVQMDCoVBQ8EADMZCXghGxgcDhIbDI94SPLUkv/9w/LOj9Wvf//msPjJmKp8UyYnEAEKAGFAG28eFyYbClY4GP//6P/30f/lutizgn9cPPvetP/isP/Kl+yyfW9ULSUSAde3g1kWDwAPEHpbMf//6v7xyv/uxPbcrNm1gvbTn96xd7lrQuFwUOvFitusedi6gd/BjmsbExMQBZJtOv//0vvepvPOlsOOUsubZv7is/jXo+Kmdv/irLV3SLmTXN68g14eEwYIAnlbN//5xOzPm+nLjeC6elhINf/lsf3DjP+7hfbBhdShbmovDIRXKNSwdFgcEgYQD0swEdmdRr6MR8SWWMCHTKZzQf/NjeiUX9h7S7NuOYpWLGo+GoRcLsKcYFsdFhQUByEUCWU7Dk4oBmI3D6VxPLGAT6lyQpJZK5hkNJJcMWpFJHhTLIRdL5ZuPF4WExQWCw4RCyIUCBsRBTUfCoFSHW9EFlkwEGQrFyoYDxEJBRMMByESCUUvF3dSK1YTEjwSDioRDSYQCQYMAAoIADUjCzAeDBgSBwkDAQ8NABMLAgoEAQgFABwUBkItFFIREWEQDmQTFHUREUgNCAQEAAUIAQUHAQAFAAIEAAYEAgMCAAEBAAgDAA8JBDgeHBwKBxgHBSUEAjUAADYAAC0AAAkAAA4FAnp6eXp6eHl5d3l5eHp6en18eYF4eId2d4V4d4R7eoV+foiBgHdycGppZmtoZm9saAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABwweTLWv0KNKkSpeybOICRAgR40cTLmz2LNq0atcybeMESBAhA4iTLm34MOLEihezbeQGTBgxI8gTL276NOrUqlczbuUIUCBBQwiUL2/8OPLkypezbuYKVChRY0gUMHD+PPr06tczb+cMWDBhg4iUMHEAQQIFCxi0bugOXDhxo8gUMXICRQoVK1i0bukQYECBwwiVMW4ESRIlS5i0b+oSZEiB40gVMnMGTRo1axiOb+sUaFCBA4mVMnQIUSJFi9g0cOwWbFiRI8kVM3UKVSpVqxg1HO0YcGChQwmWM3YMWTJly1g1HO4adGix4wYONHcOXTp165g1HO8ceCRwwcNFljR4EGFChQvZNRzwHnx40WOJFjV5EmVKlSsZtnDxBAQAOw==);
+b0ackground-size: auto;
+b0ackground-position: top left;
+b0ackground-repeat: no-repeat;
+}
+
+/*
+ background-attachment: fixed;local scroll 
+
+
+*/
+  </style>  
+</head>
+<body bgcolor="white">
+
+<!-- <textarea id="cop" style="position:absolute; left:-9999px"></textarea> -->
+<table width="100%" style="height:fit-content"><tr height=100%>
+<td style="width:123px;
+vertical-align: top; text-align: center;">
+<div id="n" style="width: 122px; aspect-ratio:1.5;">
+
+</div>
+
+<button id="note" style="margin:22px;font-size:16px;border-radius:8px;"
+onclick="
+			cop.value='';
+			cop.value+='background-position: '+n.style.backgroundPosition+';\n';
+			cop.value+='background-size: '+n.style.backgroundSize+';\n';
+			cop.value+='background-repeat: '+n.style.backgroundRepeat+';\n';
+			cop.value+='background-attachment: '+n.style.backgroundAttachment+';\n';
+			cop.select();
+			document.execCommand('copy');
+			window.getSelection()?.removeAllRanges();
+">Copy</button>
+</td>
+<td width="222px">
+<fieldset><legend>background-position</legend>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='left'"><span>left</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='center'" ><span>center</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='right'" checked><span>right</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='bottom'"><span>bottom</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='5px 10px'"><span>5px 10px</span></label><br>
+<label><input type="radio" name="pz7" onclick="fn();n.style.backgroundPosition='bottom right'"><span>bottom right</span></label><br>
+
+</fieldset>
+<fieldset><legend>background-size</legend>
+<label><input type="radio" name="pz8" onclick="fn();n.style.backgroundSize='100% 100%'" ><span>100% 100%</span></label><br>
+<label><input type="radio" name="pz8" onclick="fn();n.style.backgroundSize='auto auto'" checked><span class="i">auto auto</span></label><br>
+<label><input type="radio" name="pz8" onclick="fn();n.style.backgroundSize='cover'"><span>cover</span></label><br>
+</fieldset>
+<fieldset><legend>background-repeat</legend>
+<label><input type="radio" name="pz9" onclick="fn();n.style.backgroundRepeat='no-repeat'" checked><span>no-repeat</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();n.style.backgroundRepeat='repeat-x'"><span>repeat-x</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();n.style.backgroundRepeat='repeat-y'"><span>repeat-y</span></label><br>
+<label><input type="radio" name="pz9" onclick="fn();n.style.backgroundRepeat='repeat'"><span>repeat</span></label><br>
+</fieldset>
+
+<fieldset><legend>background-attachment</legend>
+<label><input type="radio" name="pz10" onclick="fn();n.style.backgroundAttachment='fixed'" ><span>fixed</span></label><br>
+<label><input type="radio" name="pz10" onclick="fn();n.style.backgroundAttachment='local'"checked><span class="i">local</span></label><br>
+<label><input type="radio" name="pz10" onclick="fn();n.style.backgroundAttachment='scroll'"><span>scroll</span></label><br>
+</fieldset>
+
+
+
+
+</td>
+<td style="vertical-align: top;">
+<label><input type="radio" class="ku"
+onchange="if(this.checked){
+	nz[1].checked=true; nz[1].onclick();
+	nz[6].checked=true; nz[6].onclick();
+	nz[9].checked=true; nz[9].onclick();
+	nz[14].checked=true; nz[14].onclick();
+	this.checked=true;
+}"
+>Натянуть стренчем</label><br>
+
+<label><input type="radio" class="ku"
+onchange="if(this.checked){
+	nz[0].checked=true; nz[0].onclick();
+	nz[7].checked=true; nz[7].onclick();
+	nz[12].checked=true; nz[12].onclick();
+	nz[14].checked=true; nz[14].onclick();
+	this.checked=true;
+}"
+>Замостить</label><br>
+<textarea id="cop" style="width: calc(100% - 6px);height:222px;background:#ded;
+p0osition:absolute; l0eft:-9999px;">для копирования</textarea>
+
+
+</td>
+</tr>
+</table>
+<p style="visibility:hidden">
+<input id="i1" type="checkbox" name="b" onchange="n.style.overflow=(!i1.checked)?'visible':'hidden';">
+<label for="i1">overflow:hidden;</label><br>
+
+<input id="i2" type="checkbox" name="m" onchange="n.style.whiteSpace=(!i2.checked)?'normal':'nowrap';">
+<label for="i2">white-space:nowrap;</label><br>
+
+<input id="i3" type="checkbox" name="v" onchange="n.style.textOverflow=(!i3.checked)?'clip':'ellipsis';">
+<label for="i3">text-overflow: ellipsis;</label><br>
+</p>
+<script>
+/*
+*/
+const d=[...document.querySelectorAll('.ku')];
+const fn=()=>{d.forEach(x=>{x.checked = false});}
+const nz=[...document.querySelectorAll('[name^="pz"]')];
+n.style.backgroundPosition='right';
+n.style.backgroundSize='auto';
+n.style.backgroundRepeat='no-repeat';
+n.style.backgroundAttachment='local';
+
+</script>   
+</body>
+</html>
